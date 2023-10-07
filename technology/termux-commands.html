@@ -1,0 +1,246 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+<title>Common Termux commands</title>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, Initial scale=1.0" />
+
+<meta http-equiv="content-language" content="en" />
+
+<meta name="description" content="Some of the most commonly used termux commands" />
+
+<meta name="keywords" content="termux commands,common termux commands" />
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" href="../assets/css/w3.css" type="text/css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+</script>
+<script src="../assets/scripts/main.js">
+
+</script>
+<link rel="stylesheet" href="../assets/css/main.css" type="text/css" />
+</head>
+
+<body>
+<header>
+<div class="topheader" style="font-size:36px;">
+<span class="tname">TEENSCI</span><span class="fa fa-bars navs"></span>
+
+</div>
+<div class="container" id="nav">
+
+<ul class="sidenav w3-ul" style="text-transform:uppercase;">
+<li><a href="../index.html"><i class="fa fa-home"></i>Home</a></li>
+<li><a href="index.html"><i class="fa fa-laptop"></i>Technology</a></li>
+<li><a href="../engineering/index.html"><i class="fa fa-microchip"></i>Engineering</a></li>
+<li><a href="../science/index.html"><i class="fa fa-rocket"></i>Science</a></li>
+</ul>
+</div>
+
+</header>
+
+<main id="main">
+<div class="topi row container">
+<div class="timage col-s-8 col-m-6 col-l-6">
+
+<img src="../assets/images/termux.jpg" alt="termux_screenshot" width="100%" />
+
+</div>
+</div>
+
+<div class="container row">
+
+<div class="col-s-12 col-m-12 col-l-12">
+
+<h2>Common Termux commands</h2>
+				
+<p>Termux is a common android "application" commonly used by developers and hackers.It is free and brings some sort of "linux environment" to your android phone, allowing you to install some useful hacking tools and development tools. You can install it from Google Playstore for free. The following are the most common commands.</p> 
+<p class="w3-light-blue">
+Directory here simply means a folder.
+</p>
+</div>
+</div>
+
+<div class="container row">
+
+<div class="col-s-12 col-m-12 col-l-12">
+<dl>
+
+<dt>ls</dt>
+
+<dd>Lists the current directory's content. <br />
+Suppose you have a directory called app with the following files and folder;
+<ul class="w3-light-blue w3-leftbar w3-border-green">
+<li>index.js</li>
+<li>index.css</li>
+<li>manifest.json</li>
+<li>modules</li>
+<li>
+</ul>
+While at the directory <strong>app</strong> typing <code>ls</code>
+ displays;
+<ul class="w3-light-blue w3-leftbar w3-border-green">
+<li>index.js<li>
+<li>index.css</li>
+<li>manifest.json</li>
+<li>modules</li>
+</ul>
+The command <code>ls</code> is very important when you need to know what is in a certain directory.
+</dd>
+<dt>cd</dt>
+<dd>Used to change the current working directory. Typing the following code moves you to the directory <b>app</b>.
+<p class="w3-leftbar w3-border-green w3-light-blue">cd app</p>Please note that you must already have a directory called app in your current working directory.</dd>
+<dt>mkdir</dt>
+
+<dd>The command <code>mkdir</code> is used to make a new directory.
+<p class="w3-light-blue w3-leftbar w3-border-green">mkdir app </p>
+The code above creates a new directory called app.
+</dd>
+
+<dt>rm</dt>
+
+<dd>Removes a file. It could be empty or with content.
+<p class="w3-leftbar w3-light-blue w3-border-green">rm index.html</p>
+The code above removes the file <strong>index.html</strong> from the current working directory.
+</dd>
+
+<dt>rmdir</dt>
+<dd>
+
+Removes a directory without content. (An empty directory). <br />
+The below code removes the directory <strong>app</strong> only if it is empty, otherwise it throws an error.
+<p class="w3-leftbar w3-border-green w3-light-blue">
+rmdir app
+</p>
+</dd>
+
+<dt>rm -r<dt>
+<dd>
+Removes a directory with or without content.
+The following code removes the directory <strong>app</strong>.
+<p class="w3-leftbar w3-border-green w3-light-blue">
+rm -r app
+</p>
+</dd>
+<dt>cat</dt>
+<dd>
+
+Displays the contents of a file. The following code displays the contents of the file <strong>index.html.</strong>
+<p class="w3-leftbar w3-border-green w3-light-blue">
+cat index.html
+</p>
+</dd>
+
+<dt>pwd</dt>
+<dd>Displays the present working directory. Just type <code>pwd</code> to know the directory you are currently in.
+</dd>
+
+<dt>whatis</dt>
+<dd>Used to show an offline manual of a certain command. The following command tells you what the command <strong>ls</strong> is. 
+<p class="w3-leftbar w3-border-green w3-light-blue">
+whatis ls
+</p>
+</dd>
+<dt>man</dt>
+<dd>Displays an detailed manual for a command. It is mostly online but can also be offline.
+<p class="w3-leftbar w3-border-green w3-light-blue">
+man cat
+</p>
+The above code gives online information about the command <code>cat</code>
+</dd>
+<dt>exit or logout</dt>
+<dd>Used to exit the shell. Just type any of the commands <code>exit</code> or <code>logout</code>. You can also use <code>ctrl + d </code>.
+</dd>
+<dt>clear<dt>
+<dd>Clears the screen content. Using this command gives you a clean screen. </dd>
+<dt>touch</dt>
+<dd>Creates a new file. The following code creates a new file called manifest.json.
+<p class="w3-leftbar w3-border-green w3-light-blue">
+touch manifest.json
+</p>
+</dd>
+<dt>echo</dt>
+<dd>Displays/prints arguments to the screen. All the following codes prints Hello World. 
+<p class="w3-leftbar w3-border-green w3-light-blue">
+echo Hello World <br />
+echo "Hello World" <br />
+echo "Hello World" ; <br />
+</p>
+</dd>
+<dt>top</dt>
+<dd>Displays the current running processes.</dd>
+<dt>apt install &lt;package&gt; / pkg install &lt;package&gt; </dt>
+<dd>Installs a package. The following commands both install vim package. Vim is a programmers text editor.
+<p class="w3-leftbar w3-border-green w3-light-blue">
+apt install vim <br />
+pkg install vim
+</p>
+</dd>
+
+</dl>
+</div>
+</div>
+
+<div class="container row">
+<div class="col-s-12 col-m-12 col-l-12">
+<p>The above is just a list of the most commonly used commands in termux. There are many other commands used when you install other packages.  <br />
+A good example is using <code>npm</code>, which can only be used if you have nodejs installed.	 Nodejs is a JavaScript runtime environment.  <br />
+Check out <a href="nodejs-in-android.html">how to install nodejs in android using termux</a></p>	
+<p>I hope the above list will help you get started in using termux, or improve your confidence in what you already know. If you are a newbie and inexperienced in using Termux, you can search the internet for more information on it.</p>
+
+</div>
+</div>
+
+<div class="container row">
+<h4>Popular articles</h4>
+<div class="col-s-12 col-m-6 col-l-6">
+
+<ul class="links">
+<li>&raquo;<a href="html-emoji-entities.html">Using emojis in a website</a></li>
+<li>&raquo;<a href="common-html-tags.html">Common HTML tags</a></li>
+</ul>
+</div>
+
+<div class="col-s-12 col-m-6 col-l-6">
+<ul class="links">
+<li>&raquo;<a href="nodejs-in-android.html">Nodejs in Android</a></li>
+<li>&raquo;<a href="../science/human-eye-defects.html">Defects of the human eye</a></li>
+<li>
+</ul>
+
+</div>
+</div>	
+
+<div class="container row foot" style="background-color:#007b9d;color:#fff;">
+<footer class="col-s-12 col-m-12 col-l-12 contact" style="text-align:center;">
+<p style="font-size:20px;">Contact</p>
+<a href="https://wa.me/254791869732">WhatsApp<span class="fa fa-whatsapp"></span></a>
+<br />
+
+<a href="mailto:info@teensci.info">Email<span class="fa fa-envelope"></span></a>
+
+<br />
+
+<a href="https://www.facebook.com/Teensci-112979077139089/">Facebook<span class="fa fa-facebook"></span></a>
+</footer>
+</div>	
+</main>			
+</body>
+
+</html>

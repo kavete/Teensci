@@ -1,0 +1,381 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+<title>Javascript in HTML</title>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, Initial scale=1.0" />
+
+<meta http-equiv="content-language" content="en" />
+
+<meta name="description" content="An overview of javascript programming language and using it in HTML" />
+
+<meta name="keywords" content="javascript in HTML, javascript overview, introduction to Javascript, using javascript" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" href="../assets/css/w3.css" type="text/css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+
+<link rel="stylesheet" href="../assets/css/main.css" type="text/css" />
+
+<style>
+
+code {
+background-color:#e0ffff;
+}
+
+.big {
+
+font-size:20px;
+display:inline-block;
+
+}
+
+.bigger {
+font-size:24px;
+display:inline-block;
+}
+
+</style>
+
+<link rel="stylesheet" href="../assets/css/prism.css" type="text/css" />
+
+
+<script src="../assets/scripts/main.js">
+
+</script>
+
+
+<script src="../assets/scripts/prism.js">
+
+</script>
+</head>
+
+<body>
+
+<header>
+<div class="topheader" style="font-size:36px;>
+<span class="tname">TEENSCI<span class="fa fa-bars navs"></span>
+
+</div>
+<div class="container" id="nav">
+<ul class="sidenav w3-ul" style="text-transform:uppercase;">
+<li><a href="../index.html"><i class="fa fa-home"></i>Home</a></li>
+<li><a href="index.html"><i class="fa fa-laptop"></i>Technology</a></li>
+<li><a href="../engineering/index.html"><i class="fa fa-microchip"></i>Engineering</a></li>
+<li><a href="../science/index.html"><i class="fa fa-rocket"></i>Science</a></li>
+</ul>
+</div>
+
+</header>
+<main id="main">
+<div class="topi row container">
+<div class="timage col-s-8 col-m-6 col-l-6">
+
+<img src="../assets/images/javascript-logo.jpg" alt="javascript logo" width="100%;" /> 
+
+</div>
+</div>
+
+<div class="container row">
+<div class="col-s-12 col-m-12 col-l-12">
+<h1>Javascript in HTML</h1>
+<p>This article is going to talk about javascript briefly and then we will see how to use javascript in <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
+
+<h2>Overview of Javascript</h2>
+
+<p>Javascript is one of the most popular programming languages. It is majorly used to add interactivity to webpages. It is used in conjunction with HTML (Hypertext Markup Language) and CSS (Cascading Style Sheets) for front end web development. <b>ECMAScript</b> is the official name for Javascript.</p>
+<p class="w3-light-blue">Today, Javascript is the most used programming language to develop websites, with close to 95% of websites using it. There are also several Javascript libraries which make Javascript programming simpler. One good example of such a library is jQuery.</p>
+<p>If you plan on practicing javascript programming, all you need is a browser -preferably Chrome or Safari, and a text editor. For PC (Windows, Mac and Linux) I recommend <a href="http://brackets.io/" target="_blank">Brackets</a>, <a href="https://code.visualstudio.com/" target="_blank">VScode</a> or <a href="https://atom.io/" target="_blank">Atom</a> as the editor and if you are on android you could use <a href="https://play.google.com/store/apps/details?id=com.foxdebug.acodefree&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank">Acode</a>, <a href="https://play.google.com/store/apps/details?id=com.henrythompson.quoda" target="_blank">Quoda</a>, <a href="https://play.google.com/store/apps/details?id=com.ansm.anwriter" target="_blank">anWriter</a> or <a href="https://play.google.com/store/apps/details?id=com.aor.droidedit" target="_blank">DroidEdit</a>
+</p>
+
+<p class="w3-light-blue">To use or learn javascript effectively for web development, you might need a basic understanding of <abbr title="Hypertext Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> </p>
+<p>If you are looking for detailed tutorials on Javascript, I would recommend; </p>
+
+<ul>
+<li> <a href="https://www.w3schools.com/js/" target="_blank">W3schools.com</a> </li>
+<li> <a href="https://www.javascript.info" target="_blank">Javascript.info</a> </li>
+<li> <a href="https://goalkicker.com/JavaScriptBook/" target="_blank">Goalkicker.com/JavaScriptBook</a></li>
+</ul>
+
+<h3>Case uses of Javascript</h3>
+
+<p>Generally Javascript is used in web development. It was initially used for front end web development  but has developed into just more than that. Today, Javascript is used for server side programmimg due to the introduction of <b>nodejs</b> -A javascript runtime environment. Javascript is also used in Game programming in conjunction with <abbr title="Hypertext Markup Language">HTML</abbr>, majorly by using the <code>&lt;canvas&gt;</code> tag. React Native and Phonegap have also made it possible to develop mobile apps for both Android and iOS using javascript.</p>
+<h3>Including Javascript in <abbr title="Hypertext Markup Language">HTML</abbr></h3>
+<p>Javascript is inserted in <abbr title="HyperText Markup Language">HTML</abbr> by using the <code>&lt;script&gt;</code> tag. It can be on the head section or before the closing <code>&lt;/body&gt;</code> tag. Most developers place javascript before the ending  <code>&lt;/body&gt;</code> tag  to speed up page load. If you place javascript in the head section, your page might take a little more time to load. Place your javascript in the head section only if your page elements really need it for first impression.</p>
+
+<h4>Javascript in the head section</h4>
+
+<p>
+<pre>
+<code class="language-markup">
+&lt;!doctype html&gt;
+&lt;html&gt; 
+   &lt;head&gt; 
+       &lt;script&gt; 
+           //Javascript code 
+       &lt;/script&gt; 
+   &lt;/head&gt; 
+   &lt;body&gt; 
+    &lt;!--
+        HTML elements 
+    --&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+</p>
+
+<h4>Javascript before the &lt;/body&gt; tag</h4>
+
+<p>
+<pre>
+<code class="language-markup">
+&lt;!doctype html&gt;
+&lt;html&gt; 
+   &lt;head&gt; 
+    &lt;!--
+        Meta data
+     --&gt;
+   &lt;/head&gt; 
+   &lt;body&gt; 
+    &lt;!--
+        HTML elements 
+     --&gt;
+      &lt;script&gt; 
+           //Javascript code 
+      &lt;/script&gt; 
+   &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+</p>
+
+<h3>External Javascript</h3>
+<p>Javascript can also be used in <abbr title="Hypertext Markup Language">HTML</abbr> by placing it in another file  rather than writing it directly in <abbr title="Hypertext Markup Language">HTML</abbr>. You are going to find external javascript very useful especially when linking to large javascript files or javascript files not written by you. A good example is linking to a javascript library such as jQuery. External javascript can  be linked in the head section or before the closing <code>&lt;/body&gt;</code> tag. Javascript files have a file extension of <code>.js</code></p>
+
+<p>Suppose you have a javascript file called <code>jscript.js</code> placed in the same folder as the html file, you can link it by using the <code>&lt;script&gt;</code>  with an <code>src</code> attribute pointing to your javascript file.</p>
+
+<h4>External Javascript in head section</h4>
+
+<pre>
+<code class="language-markup">
+&lt;!doctype html&gt;
+&lt;html&gt; 
+   &lt;head&gt; 
+       &lt;script src="jscript.js"&gt;    
+       &lt;/script&gt; 
+   &lt;/head&gt; 
+   &lt;body&gt; 
+    &lt;!--
+        HTML elements 
+     --&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+
+
+<h4>External javascript before the &lt;/body&gt; tag</h4>
+
+<pre>
+<code class="language-markup">
+&lt;!doctype html&gt;
+&lt;html&gt; 
+   &lt;head&gt; 
+     &lt;!--
+        Meta data
+     --&gt;
+   &lt;/head&gt; 
+   &lt;body&gt; 
+    &lt;!--
+        HTML elements
+     --&gt; 
+     &lt;script src="jscript.js"&gt; 
+            
+       &lt;/script&gt; 
+   &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+
+
+<p class="w3-light-blue">As discussed earlier, placing javascript before the closing <code>&lt;/body&gt;</code> tag speeds up page load.</p>
+
+<h3>Javascript Output</h3>
+<p>The <code>document.write()</code>, <code>console.log()</code> and <code>innerHTML()</code> methods are the main used to output content in <abbr title="Hypertext Markup Language">HTML</abbr>. </p>
+
+<p>The <code>document.write()</code> method should only be used for testing purposes. It overwrites all the existing <abbr title="Hypertext Markup Language">HTML</abbr> elements.</p>
+
+<pre>
+<code class="language-markup">
+&lt;!doctype html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+      &lt;script&gt;
+        document.write("&lt;h1&gt;Hello world&lt;/h1&gt;");
+      &lt;/script&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+  
+   &lt;/body&gt;
+&lt;html&gt;
+</code>
+</pre>
+
+<p>The above code outputs a level one heading. The text inside the <code>document.write()</code> can contain markup tags as in the example above.</p>
+<p>The <code>console.log()</code> method is used to output content in the browsers console. It is meant for debugging purposes. If you are on windows and you are using Microsoft Edge or Internet Explorer, you can press <i>F12</i> to access the console. For Chrome you can use the shortcut <code>Shift + CTRL + J</code>.</p>
+
+<pre>
+<code class="language-markup">
+&lt;!doctype html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+      &lt;script&gt;
+        console.log("Hello   world");
+      &lt;/script&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+  
+   &lt;/body&gt;
+&lt;html&gt;
+</code>
+</pre>
+
+<p>The above code prints <i>Hello World</i> in the browser's console.</p>
+
+<p>The <code>innerHTML()</code> method can also be used to output content in <abbr title="Hypertext Markup Language">HTML</abbr>. To use this method, you need to have selected an <abbr title="Hypertext Markup Language">HTML</abbr> element (You should be able to access the <abbr title="Document Object Module">DOM</abbr>). There are several ways of accessing <abbr title="Hypertext Markup Language">HTML</abbr> elements. In the example below we have used <code>document.getElementById()</code>.</p>
+
+<pre>
+<code class="language-markup">
+&lt;!doctype html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;!--
+    Meta data
+   --&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h1&gt;Example&lt;/h1&gt;
+  &lt;div id="demo"&gt; &lt;/div&gt;
+ &lt;script&gt;
+  var elem = document.getElementById("demo");
+  elem.innerHTML("&lt;p&gt;This is new text from javascript&lt;/p&gt;");
+ &lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<p>The above code will output;</p>
+<div class="w3-light-blue w3-bottombar w3-border-green">
+<p style="font-size:36px;">Example</p>
+<p>This is new text from Javascript</p>
+</div>
+<span class="big">The &lt;noscript&gt; tag</span>
+
+<p>The content between these tags is shown when the clients browser doesn't support Javascript or they have disabled it. You can place the
+<code>&lt;noscript&gt;</code> tags in the head section as shown in the code below.</p>
+
+<pre>
+<code class="language-markup">
+&lt;!doctype html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;noscript&gt;
+   Your browser does not support  Javascript or you have disabled it.
+   Javascript is needed to continue.
+  &lt;noscript&gt;
+  &lt;script&gt;
+   //Javascript code
+  &lt;/script&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;!--
+    HTML elements
+   --&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+
+</code>
+</pre>
+<h3>Javascript comments</h3>
+<p>Comments are ignored by the browser. Comments make your code readable to yourself and others. They also help in understanding the coder's thought process. Comments can  be used for debugging purposes since commenting a certain javascript code prevents it from being executed.</p>
+
+<p>There are Single line comments and multi-line comments. Single line comments should start with two forward slashes ( // ). Comments spanning more than one line  should start with a forward slash and an asterisk ( /* ) and end with an asterik and a forward slash ( */ ). Check out the comments below.</p>
+
+<pre>
+<code class="language-markup">
+&lt;script&gt;
+
+// single line comment
+
+/*
+
+Multi line 
+comment 
+
+*/
+&lt;/script&gt;
+</code>
+</pre>
+
+</div>
+</div>	
+
+<div class="container row">
+<h4>Popular articles</h4>
+<div class="col-s-12 col-m-6 col-l-6">
+
+<ul class="links">
+<li>&raquo;<a href="html-emoji-entities.html">Using emojis in a website</a></li>
+<li>&raquo;<a href="common-html-tags.html">Common HTML tags</a></li>
+</ul>
+</div>
+
+<div class="col-s-12 col-m-6 col-l-6">
+<ul class="links">
+<li>&raquo;<a href="termux-commands.html">Common Termux commands</a></li>
+<li>&raquo;<a href="../science/human-eye-defects.html">Defects of the human eye</a></li>
+<li>
+</ul>
+
+</div>
+</div>	
+
+<div class="container row foot" style="background-color:#007b9d;color:#fff;">
+<footer class="col-s-12 col-m-12 col-l-12 contact" style="text-align:center;">
+<p style="font-size:20px;">Contact</p>
+<a href="https://wa.me/254791869732">WhatsApp<span class="fa fa-whatsapp"></span></a>
+<br />
+
+<a href="mailto:info@teensci.info">Email<span class="fa fa-envelope"></span></a>
+
+<br />
+
+<a href="https://www.facebook.com/Teensci-112979077139089/">Facebook<span class="fa fa-facebook"></span></a>
+</footer>
+</div>		
+</main>		
+</body>
+
+</html>
+
+
+
+
+

@@ -1,0 +1,284 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+<title>Front end web technologies</title>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, Initial scale=1.0" />
+
+<meta http-equiv="content-language" content="en" />
+
+
+<meta name="description" content="Front end web technologies you need to know as a developer" />
+
+<meta name="keywords" content="front end web, front end technologies, front end languages" />
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" href="../assets/css/w3.css" type="text/css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+
+<link rel="stylesheet" href="../assets/css/main.css" type="text/css" />
+
+<style>
+@keyframes colorchange {
+   0% {background-color: blue;}
+   100% {background-color: green;}
+}
+
+
+#animation {
+animation-name:colorchange;
+animation-duration:6s;
+animation-iteration-count:infinite;
+}
+
+
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+</script>
+<script src="../assets/scripts/main.js">
+
+</script>
+<link rel="stylesheet" href="../assets/css/prism.css" type="text/css" />
+
+<script src="../assets/scripts/prism.js">
+
+</script>
+</head>
+
+<body>
+
+<header>
+<div class="topheader" style="font-size:36px;">
+<span class="tname">TEENSCI</span><span class="fa fa-bars navs"></span>
+
+</div>
+<div class="container" id="nav">
+
+<ul class="sidenav w3-ul" style="text-transform:uppercase;">
+<li><a href="../index.html"><i class="fa fa-home"></i>Home</a></li>
+<li><a href="index.html"><i class="fa fa-laptop"></i>Technology</a></li>
+<li><a href="../engineering/index.html"><i class="fa fa-microchip"></i>Engineering</a></li>
+<li><a href="../science/index.html"><i class="fa fa-rocket"></i>Science</a></li>
+</ul>
+</div>
+
+</header>
+
+<main id="main">
+
+<div class="topi row container">
+<div class="timage col-s-8 col-m-6 col-l-6">
+
+<img src="../assets/images/programming.jpg" alt="Programming" width="100%" />
+
+</div>
+</div>
+
+<div class="container row">
+
+<div class="col-s-12 col-m-12 col-l-12">
+<h2>Front End Web Technologies</h2>
+
+<p>Web development is divided into two main parts, Front End Web development and Back End Web development. Some might also include full stack development which is just a combination of front end and back end development. This article focuses on the front end technologies.</p>
+
+<p>Front end web development majorly deals with programming the browser. What you see on a web page including the images, animations and functionality is majorly front end development. The main technologies used are HTML, CSS, Javascript, CSS frameworks and Javascript Libraries and Frameworks. </p>
+
+<h3>HTML (HyperText Markup Language) </h3>
+
+<p>HTML is one of the core technologies in web development. It is used to markup text (define how text will be displayed) in browsers (majorly). With introduction of HTML5 new capabilities are included such as embeding video, audio and many other features. XHTML is another alternative to HTML which is basically HTML conforming to XML (Extensible Markup Language) rules. The following is an example of a simple HTML code with a level one heading, an HTML entity and a paragraph.</p>
+
+
+<pre>
+<code class="language-markup">
+&lt;!doctype html&gt;
+ &lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+   &lt;h1&gt;Heading&lt;/h1&gt;
+
+    &lt;p&gt;Hello there, my name is &lt;b&gt;Paragraph&lt;/b&gt;.
+    I am a paragraph of course &amp#x1F601;&lt;/p&gt;
+  &lt;/body&gt;
+ &lt;html&gt;
+</code>
+</pre>
+
+
+Output
+
+<div class="w3-bottombar w3-light-blue w3-border-green">
+<h1>Heading</h1>
+<p>Hello there, my name is <b>Paragraph</b>. I am a paragraph of course &#x1F601; . </p>
+</div>
+
+<h3>CSS (Cascading Style Sheets) </h3>
+
+<p>CSS is used to style HTML elements and to make a website responsive. CSS makes a website beautiful not just some plain text. Without CSS, websites could contain majorly plain text and maybe some images placed anyhow. With CSS, you can  have color, animations and special behaviour for different devices (RWD -Responsive Web Design).</p>
+
+<p>The following is a simple CSS code that changes the color of an element with id animation at given intervals.</p>
+
+<pre>
+<code class="language-markup">
+&lt;!doctype html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;style&gt;
+   @keyframes colorchange {
+     0% {background-color:blue;}
+     100% {background-color:green;}
+   } 
+
+   #animation{
+
+     animation-name:colorchange; 
+     animation-duration:6s; 
+     animation-iteration-count:infinite;
+   }
+  &lt;/style&gt;
+ &lt;head&gt;
+ &lt;body&gt;
+  &lt;p id="animation" style="width:100px;height:100px;"&gt; &lt;/p&gt;
+
+ &lt;/body&gt;
+&lt;/html&gt;
+
+</code>
+</pre>
+
+Output
+
+<p id="animation" style="width:100px;height:100px;">
+
+</p>
+
+<h3>Javascript</h3>
+<p>Javascript is the programming language of the web. It is used to add interactivity to websites. With Javascript, you can  include animations, change content dynamically, validate form data, add behaviour to elements and many more. </p>
+<p>The following is a simple Javascript code used to alert the client</p>
+
+
+<pre>
+<code class="language-markup">
+
+&lt;!doctype html&gt;
+ &lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h1&gt;Javascript example code&lt;h1&gt;
+  
+   &lt;button onclick="hello()"&gt;Click me&lt;/button&gt;
+
+ &lt;script&gt;
+
+  function hello() {
+
+    alert("This is Javascript in Action");
+
+    }
+
+ &lt;/script&gt;
+ &lt;/body&gt;
+&lt;html&gt;
+</code>
+</pre>
+
+Output
+ <br />
+<button class="button" onclick='alert("This is Javascript in Action");'>Click me </button>
+
+<h3>CSS Frameworks/libraries </h3>
+<p>CSS libraries are just CSS files which make using CSS properties much easier. For example giving an element a certain class and automatically getting it styled in a certain way. There are many CSS frameworks incuding;</p>
+
+<ol>
+<li>&#x2714;Bootstrap - Includes Javascript</li>
+<li>&#x2714;Foundation</li>
+<li>&#x2714;Tailwind</li>
+<li>&#x2714;W3.css -Purely CSS </li>
+<li>&#x2714;Bulma</li>
+<li>&#x2714;Pure</li>
+<li>&#x2714;Skeleton</li>
+<li>&#x2714;Materialize</li>
+</ol>
+<p> The most popular of the CSS libraries by far is <a href="https://www.getbootstrap.com" target="_blank">Bootstrap</a>, however if you are beginner I would recommend first checking on <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">W3.css</a> or the other mentiones libraries. CSS libraries also help in making your site responsive.You can even make your own CSS library to ease developing your web pages.</p>
+
+<h3>Javascript Libraries and Frameworks</h3>
+Just like CSS libraries, Javascript libraries also ease the writing of Javascript code. Frameworks are a little bit more powerful, some even extending to Back end development. Most of the time pure Javascript (Vanilla Javascript) can involve lots of code for a task which can be done with a few lines when using a JS library. There are also many Javascript libraries and frameworks today incuding;</p>
+
+<ol>
+<li>&#x2714;Jquery</li>
+<li>&#x2714;ReactJs</li>
+<li>&#x2714;AngularJS</li>
+<li>&#x2714;Angular</li>
+<li>&#x2714;VueJs</li>
+<li>&#x2714;Polymer</li>
+<li>&#x2714;Lodash</li>
+</ol>
+
+<p>Jquery is very popular due to it's simplicity with power. Most people combine Jquery with one of the other mentioned libraries. There is no harm in learning all of them since each one of them has it's own strengths.</p>
+
+<h4>Other technologies</h4>
+<p>The above mentioned technologies are basically the main used, though their are others (not compulsory but important) such as git and bundlers such as webpack. Git version control makes you store all you code during all stages of development. You can switch from one version of your code to another.</p>
+</div>
+
+</div>
+
+
+<div class="container row">
+<h4>Popular articles</h4>
+<div class="col-s-12 col-m-6 col-l-6">
+
+<ul class="links">
+<li>&raquo;<a href="termux-commands.html">Common Termux commands</a></li>
+<li>&raquo;<a href="common-html-tags.html">Common HTML tags</a></li>
+</ul>
+</div>
+
+<div class="col-s-12 col-m-6 col-l-6">
+<ul class="links">
+<li>&raquo;<a href="nodejs-in-android.html"> Nodejs in Android</a></li>
+<li>&raquo;<a href="../science/human-eye-defects.html">Defects of the human eye</a></li>
+
+</ul>
+
+</div>
+</div>	
+
+<div class="container row foot" style="background-color:#007b9d;color:#fff; width:100%;">
+<footer class="col-s-12 col-m-12 col-l-12 contact" style="text-align:center;">
+<p style="font-size:20px;">Contact</p>
+<a href="https://wa.me/254791869732">WhatsApp<span class="fa fa-whatsapp"></span></a>
+<br />
+
+<a href="mailto:info@teensci.info">Email<span class="fa fa-envelope"></span></a>
+
+<br />
+
+<a href="https://www.facebook.com/Teensci-112979077139089/">Facebook<span class="fa fa-facebook"></span></a>
+</footer>
+</div>
+</main>				
+</body>
+
+</html>
+
+
+
+

@@ -1,0 +1,223 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+<title>Nodejs in android</title>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, Initial scale=1.0" />
+
+<meta http-equiv="content-language" content="en" />
+
+<meta name="description" content="How to install Nodejs in Android using the termux application" />
+
+<meta name="keywords" content="Nodejs in termux, install nodejs, nodejs in android" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" href="../assets/css/w3.css" type="text/css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+
+<link rel="stylesheet" href="../assets/css/main.css" type="text/css" />
+<link rel="stylesheet" href="../assets/css/prism.css" type="text/css" />
+
+<script src="../assets/scripts/prism.js">
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+</script>
+<script src="../assets/scripts/main.js">
+
+</script>
+</head>
+
+<body>
+<header>
+<div class="topheader" style="font-size:36px;">
+<span class="tname">TEENSCI</span><span class="fa fa-bars navs"></span>
+
+</div>
+<div class="container" id="nav">
+
+<ul class="sidenav w3-ul" style="text-transform:uppercase;">
+<li><a href="../index.html"><i class="fa fa-home"></i>Home</a></li>
+<li><a href="index.html"><i class="fa fa-laptop"></i>Technology</a></li>
+<li><a href="../engineering/index.html"><i class="fa fa-microchip"></i>Engineering</a></li>
+<li><a href="../science/index.html"><i class="fa fa-rocket"></i>Science</a></li>
+</ul>
+</div>
+
+</header>
+
+<main id="main">
+<div class="topi row container">
+<div class="timage col-s-8 col-m-6 col-l-6">
+
+<img src="../assets/images/nodejs.png" alt="nodejs_logo" width="100%" />
+
+</div>
+</div>
+
+
+<div class="container row">
+<div class="col-s-12 col-m-12 col-l-12">
+
+<h2>Installing Nodejs in Android using Termux</h2>
+
+<p>Nodejs is a Javascript runtime environment that allows you to run Javascript on the server. It also allows you to install some packages using npm(Node Package Manager) such as Express! If you do not have a laptop or a desktop, or you just want to try out Nodejs in your Android phone, then this article is for you.</p>
+
+<h3>Install Termux</h3>
+<p>If you already have Termux installed, then skip this step. <br />
+You can get Termux from the Playstore free of charge(It is less than 20MB). After installing it make sure that you grant storage permission.<br />
+Run the following commands to check if it is the latest version.</p>
+
+<p class="w3-light-blue w3-leftbar w3-border-green">
+<code>apt update && apt upgrade</code> <br />
+or <br />
+
+<code>apt update</code> <br />
+<code>apt upgrade</code>
+
+</p>
+
+<p>You can also run the following command just to be sure</p>
+
+<p class="w3-light-blue w3-leftbar w3-border-green">
+<code>apt install coreutils</code>
+
+</p>
+<p>That's all about installing termux. <br />
+Check out <a href="termux-commands.html">common termux commands</a></p>
+</div>
+
+<h3>Install nodejs</h3>
+
+<p>Installing Nodejs automatically installs <code>npm</code>. To install nodejs, run the following command.</p>
+
+<p class="w3-light-blue w3-leftbar w3-border-green">
+<code>apt install nodejs</code>
+</p>
+
+<p>When prompted about the file taking some space, accept by typing the letter <code style="color:#088;">y</code> and pressing enter.  The installation will be completed within a short period of time. When done, confirm that nodejs and npm are installed by checking the versions as below.</p>
+
+<p class="w3-light-blue w3-leftbar w3-border-green">
+
+<code>
+node -v <br />
+or <br />
+node --version <br />
+and <br />
+npm -v <br />
+or <br />
+npm --version
+
+
+</code>
+</p>
+
+<p>By the time I was installing, nodejs was version <code>14.4.0</code> while npm was version <code>6.14.5</code>
+</p>
+
+<h3>A simple server in Nodejs</h3>
+
+<p>Create a file called <code>server.js</code> <br />
+I recommend installing vim which is a programmers text editor. Install it by running the following command.</p>
+
+<p class="w3-light-blue w3-leftbar w3-border-green">
+<code>apt install vim</code>
+</p>
+<p>To create or open a file in vim use; </p>
+<p class="w3-light-blue w3-leftbar w3-border-green">
+
+<code>vim <i>filename</i> </code>
+</p>
+
+<p>In our case using <code>vim server.js</code> creates a new file called server.js. To edit (insert content to) the file type the letter <code><b>i</b></code>. </p>
+
+<p>After creating the file, copy the following simple code for a server.</p>
+
+<pre>
+
+<code class="language-js">
+
+const http= require ('http');
+ 
+http.createServer((request, response) => {
+
+response.writeHead(200, {
+
+});
+
+response.write('I just created my first server in Nodejs \n');
+
+response.end();
+
+}).listen(1337);
+
+</code>
+</pre>
+<p>With vim, to save a file you press <code>Esc</code> then type <code>:wq</code>. <br/>
+You can also use the following; <br />
+:wq - To save and Quit <br />
+:q -To quit without saving <br />
+You can now run the following code to activate your server.</p>
+<p class="w3-light-blue w3-leftbar w3-border-green">
+
+<code>
+node server.js
+</code>
+</p>
+
+<p>You can now open your browser at <a href="localhost:1337" target="_blank"><code>localhost:1337</code> </a>. To stop the server in Termux use <code>Ctrl + C </code>. </p>
+
+<p>That's all about installing nodejs in Android. If you have any queries please visit our contact section. </p>
+</div>
+
+<div class="container row">
+<h4>Popular articles</h4>
+<div class="col-s-12 col-m-6 col-l-6">
+
+<ul class="links">
+<li>&raquo;<a href="html-emoji-entities.html">Using emojis in a website</a></li>
+<li>&raquo;<a href="common-html-tags.html">Common HTML tags</a></li>
+</ul>
+</div>
+
+<div class="col-s-12 col-m-6 col-l-6">
+<ul class="links">
+<li>&raquo;<a href="termux-commands.html">Common Termux commands</a></li>
+<li>&raquo;<a href="../science/human-eye-defects.html">Defects of the human eye</a></li>
+<li>
+</ul>
+
+</div>
+</div>	
+
+<div class="container row foot" style="background-color:#007b9d;color:#fff;">
+<footer class="col-s-12 col-m-12 col-l-12 contact" style="text-align:center;">
+<p style="font-size:20px;">Contact</p>
+<a href="https://wa.me/254791869732">WhatsApp<span class="fa fa-whatsapp"></span></a>
+<br />
+
+<a href="mailto:info@teensci.info">Email<span class="fa fa-envelope"></span></a>
+
+<br />
+
+<a href="https://www.facebook.com/Teensci-112979077139089/">Facebook<span class="fa fa-facebook"></span></a>
+</footer>
+</div>
+</main>				
+</body>
+
+</html>
